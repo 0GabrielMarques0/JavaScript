@@ -1,4 +1,4 @@
-1 --> .	var entrada = require("readline-sync")
+1 --> 	var entrada = require("readline-sync")
 
 	var num = parseFloat(entrada.question("Digite o numero: "))
 
@@ -213,24 +213,23 @@
 
 15 --> var entrada = require("readline-sync")
 
-var nome = entrada.question("Ola, digite seu nome completo: ")
-var salario = parseFloat(entrada.question("Digite seu salario bruto: "))
-var fgts = (salario * 0.08)
-var inss = (salario * 0.12)
+	var nome = entrada.question("Ola, digite seu nome completo: ")
+	var salario = parseFloat(entrada.question("Digite seu salario bruto: "))
+	var fgts = (salario * 0.08)
+	var inss = (salario * 0.12)
 
+	console.log("Olá", nome, "seu salário bruto é: R$"+ salario)
+	console.log("Olá", nome, "o desconto do FGTS será: R$"+ fgts)
+	console.log("Olá", nome, "o desconto do INSS será: R$"+inss)
 
-console.log("Olá", nome, "seu salário bruto é: R$"+ salario)
-console.log("Olá", nome, "o desconto do FGTS será: R$"+ fgts)
-console.log("Olá", nome, "o desconto do INSS será: R$"+inss)
-
-if (salario < 1500) {
-    var imposto = (salario * 0.075)
-    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+imposto)
-} else if (salario >= 1500 && salario < 2000) {
-    var imposto = (salario * 0.1)
-    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
-} else {
-    var imposto = (salario * 0.15)
-    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
-}
-console.log("Olá", nome, "seu salário liquido será: R$" + (salario - (inss + imposto)).toFixed(2))
+	if (salario < 1500) {
+	    var imposto = (salario * 0.075)
+	    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+imposto)
+	} else if (salario >= 1500 && salario < 2000) {
+	    var imposto = (salario * 0.1)
+	    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
+	} else {
+	    var imposto = (salario * 0.15)
+	    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
+	}
+	console.log("Olá", nome, "seu salário liquido será: R$" + (salario - (inss + imposto)).toFixed(2))

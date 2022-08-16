@@ -1,0 +1,73 @@
+1 --> 	var entrada = require ("readline-sync")
+	var nome = entrada.question("Digite seu nome:" )
+	console.log("Olá",nome, "seja bem vindo!")
+
+2 --> 	var entrada = require ("readline-sync")
+	var nome = entrada.question("Digite seu nome: ")
+	var sobrenome = entrada.question("Digite seu sobrenome:")
+	console.log("Olá seu nome completo é",nome,sobrenome)
+
+3 --> 	var entrada = require ("readline-sync")
+	var numero1 = parseInt(entrada.question("Digite o primeiro numero:" ))
+	var numero2 = parseInt(entrada.question("Digite o segundo numero:" ))
+	console.log("Olá a soma dos números inseridos é", numero1+numero2)
+
+4 --> 	var entrada = require ("readline-sync")
+	var n1 = parseFloat(entrada.question("Digite a nota de matematica:" ))
+	var n2 = parseFloat(entrada.question("Digite a nota de portugues:" ))
+	var n3 = parseFloat(entrada.question("Digite a nota de fisica:" ))
+	console.log("Olá, a média das nota é", (n1+n2+n3)/3)
+
+5 --> 	var entrada = require ("readline-sync")
+	var n1 = parseInt(entrada.question("Digite o primeiro numero:" ))
+	var n2 = parseInt(entrada.question("Digite o segundo numero:" ))
+	console.log("Olá, o primeiro número é igual ao segundo:",n1===n2)
+
+6 --> 	var entrada = require ("readline-sync")
+	var n = parseInt(entrada.question("Digite o numero: "))
+	console.log("Olá, o numero é ",n % 2 === 0)
+
+7 --> 	var entrada = require ("readline-sync")
+	var id1 = parseInt(entrada.question("Digite a primeira idade:" ))
+	var id2 = parseInt(entrada.question("Digite a segunda idade:" ))
+	var id3 = parseInt(entrada.question("Digite a terceira idade:" ))
+	console.log("Olá, a primeira idade é menor que a soma das outras:",id1<id2+id3)
+
+8 --> 	var entrada = require ("readline-sync")
+	var lado = parseFloat(entrada.question("Digite o comprimento do lado do quadrado:" ))
+	console.log("Olá, a área do quadrado de lado",lado,"é:",lado*lado)
+
+9 --> 	var entrada = require ("readline-sync")
+	var compri_terreno = parseFloat(entrada.question("Digite o comprimento do terreno:" ))
+	var larg_terreno = parseFloat(entrada.question("Digite a largura do terreno:" ))
+	var compri_casa = parseFloat(entrada.question("Digite o comprimento da casa:" ))
+	var larg_casa = parseFloat(entrada.question("Digite a largura da casa:" ))
+	console.log("Olá, a área não construida do terreno é:",(compri_terreno*larg_terreno)-(compri_casa*larg_casa),"m")
+
+10 -->  var entrada = require ("readline-sync")
+    	var raio = parseFloat(entrada.question("Digite o raio da circunferencia:" ))
+    	console.log("Olá, a área da circunferência é:",raio*3.14)
+
+11 -->	var piso = 10*15
+	var caixa = 2.2
+	console.log("Olá, a quantidade necessária de caixas de cerâmica é:",piso/caixa)
+
+12 -->	var entrada = require("readline-sync")
+	var num = parseFloat(entrada.question("Digite o numero: "))
+	console.log("Olá, o valor de 75% do número digitado é:",num*0.75)
+
+13 -->	var entrada = require("readline-sync")
+	var nome = entrada.question("Digite seu nome: ")
+	var id = parseInt(entrada.question("Digite seu ano de nascimento: "))
+	console.log("Olá,",nome,"sua idade é:",2022-id)
+
+14 -->	var entrada = require("readline-sync")
+	var salario = parseFloat(entrada.question("Digite o seu salario: "))
+	console.log("Seu salário bruto é: R$",salario,"reais")
+	console.log("O recolhimento do FGTS é: R$",salario*0.08,"reais")
+	console.log("O recolhimento de INSS será: R$",salario*0.12,"reais")
+	console.log("O salário líquido este mês será: R$",salario-(salario*0.12),"reais")
+
+15 -->	var entrada = require("readline-sync")
+	var raio = parseFloat(entrada.question("Digite o raio do cirulo: "))
+	console.log("Olá, a área do quadrado que caberá o cirulo é:",(2*3*raio)*(2*3*raio))
