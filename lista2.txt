@@ -1,0 +1,236 @@
+1 --> .	var entrada = require("readline-sync")
+
+	var num = parseFloat(entrada.question("Digite o numero: "))
+
+	if(num>20 && num<90){
+	    console.log("O numero",num,"está entre 20 e 90")
+	}else{
+	    console.log("O numero",num,"não está entre 20 e 90")
+	}
+
+2 -->	var entrada = require("readline-sync")
+
+	var num1 = parseFloat(entrada.question("Digite o primeiro numero:"))
+	var num2 = parseFloat(entrada.question("Digite o segundo numero: "))
+
+	if(num1>num2){
+    		console.log("O numero",num1,"é maior que o numero",num2)
+	}else{
+    		console.log("O numero",num2,"é maior que o numero",num1)
+	}
+
+3 -->	var entrada = require("readline-sync")
+
+	var num1 = parseFloat(entrada.question("Digite o primeiro numero:"))
+
+	if(num1>0){
+   		 console.log("O numero",num1,"é positivo")
+	}else{
+   	 	console.log("O numero",num1,"é negativo")
+	}
+
+4 -->	var entrada = require("readline-sync")
+
+	var letra = entrada.question("Digite a letra:")
+
+	if(letra ==="a" || letra==="e" || letra==="i" || letra ==="o" || letra==="u"){
+	    console.log("A letra:",letra,",é uma vogal")
+	}else{
+	    console.log("A letra:",letra,",é uma consoante")
+	}
+
+5 -->	var entrada = require("readline-sync")
+
+	var tam = entrada.question("Digite o tamanho da sua camisa:")
+
+	if(tam ==="p"){
+       		console.log("Seu tamanho de camisa é:",tam)
+	}else if(tam==="m"){
+    		console.log("Seu tamanho de camisa é:",tam)
+	}else if(tam==="g"){
+    		console.log("Seu tamanho de camisa é:",tam)
+	}else if(tam==="x"){
+    		console.log("Seu tamanho de camisa é:",tam)
+	}else{
+    		console.log("A opção de tamanho:",tam,",é inválida")
+	}
+
+6 -->	var entrada = require("readline-sync")
+
+	var num1 = parseFloat(entrada.question("Digite o primeiro numero:"))
+	var num2 = parseFloat(entrada.question("Digite o segundo numero:"))
+	var num3 = parseFloat(entrada.question("Digite o terceiro numero:"))
+
+	if(num1>num2 && num1>num3 && num2>num3){
+    		console.log("O numero",num1,"é o maior e", num3,"é o menor")
+	}else if(num2>num3 && num2>num1 && num3>num1){
+    		console.log("O numero",num2, "é o maior e",num1, "é o menor")
+	}else{
+    		console.log("o numero",num3,"é o maior e ",num2,"é o menor")
+	}
+
+7 -->	var entrada = require("readline-sync")
+
+	var turno = entrada.question("Digite o turno que voce estuda(M;V;N): ")
+
+	if(turno==="M"||turno==="m"){
+	    console.log("Bom dia!")
+	}else if(turno==="V"||turno==="v"){
+	    console.log("Boa tarde!")
+	}else if(turno==="N"||turno==="n"){
+ 	   console.log("Boa noite!")
+	}else{
+	   console.log("Valor inválido")
+	}
+
+
+8 -->	var entrada = require("readline-sync")
+
+	var cid = entrada.question("Digite a cidade onde reside:")
+	var gaso = parseFloat(entrada.question("Digite o valor da gasolina:"))
+	var alc = parseFloat(entrada.question("Digite o valor do alcool:"))
+	var gaso_alc = (alc/gaso)*100 + "%"
+
+	if(alc<(0.7*gaso)){
+    		console.log("Na cidade",cid,"o valor do alcool corresponde a",gaso_alc,"do valor da gasolina, logo, compensa abastecer com alcool")
+	}else{
+   		console.log("Na cidade",cid,"o valor do alcool corresponde a",gaso_alc,"do valor da gasolina, logo, não compensa abastecer com alcool")
+	}
+
+9 -->	var entrada = require("readline-sync")
+
+	var num1 = parseFloat(entrada.question("Digite o primeiro numero:"))
+	var num2 = parseFloat(entrada.question("Digite o segundo numero:"))
+	var num3 = parseFloat(entrada.question("Digite o terceiro numero:"))
+
+	if(num1>num2 && num1>num3 && num2>num3){
+	    console.log("A ordem crescente é: ",num3,num2,num1)
+	}else if(num1>num3 && num1>num2 && num3>num2){
+	    console.log("A ordem crescente é: ",num2,num3,num1)
+	}else if(num2>num1 && num2>num3 && num1>num3){
+	    console.log("A ordem crescente é: ",num3,num1,num2)
+	}else if(num2>num3 && num2>num1 && num3>num1){
+	    console.log("A ordem crescente é: ",num2,num3,num2)
+	}else if(num3>num1 && num3>num2 && num2>num1){
+	    console.log("A ordem crescente é: ",num1,num2,num3)
+	}else if(num3>num2 && num3>num1 && num1>num2){
+	    console.log("A ordem crescente é: ",num2,num1,num3)
+	}else{
+	    console.log("ERRO! Digite numeros que sejam diferentes")
+	}
+
+10 -->	var entrada = require("readline-sync")
+
+	var num = parseInt(entrada.question("Digite o numero: "))
+
+	if(num%2===0){
+	    console.log("O numero",num,"é par")
+	}else{
+	    console.log("O numero",num,"é ímpar")
+	}
+
+11 -->	var entrada = require("readline-sync")
+
+	var nota1 = parseFloat(entrada.question("Digite sua nota de matematica: "))
+	var nota2 = parseFloat(entrada.question("Digite sua nota de quimica: "))
+	var nota3 = parseFloat(entrada.question("Digite sua nota de fisica: "))
+	var media = (nota1+nota2+nota3)/3
+
+	if(media >= 7){
+	    console.log("Sua média é: ",media,"Você passou!")
+	}else{
+	    console.log("Sua média é: ",media,"Você não passou!")
+	}
+
+12 -->	var entrada = require("readline-sync")
+
+	var nota1 = parseFloat(entrada.question("Digite sua nota do trabalho de laboratorio: "))
+	var nota2 = parseFloat(entrada.question("Digite sua nota da avaliacao semestral: "))
+	var nota3 = parseFloat(entrada.question("Digite sua nota do exame final: "))
+	var media = (nota1+nota2+nota3)/3
+
+	if(media >= 7){
+	    console.log("Sua média é: ",media,"Você passou!")
+	}else if(media>=4 && media<7){
+	    console.log("Sua média é: ",media,"Você está na recuperação!")
+	}else{
+	    console.log("Sua média é: ",media,"Você foi reprovado")
+	}
+
+13 -->	var entrada = require("readline-sync")
+
+	var salario = parseFloat(entrada.question("Digite sua salario: "))
+	var s1 = (salario * 0.2)
+	var s2 = (salario * 0.15)
+	var s3 = (salario * 0.1)
+	var s4 = (salario * 0.05)
+
+	if(salario <= 280){
+	    var nsalario = s1 + salario
+	} else if(salario>=281 && salario<=700){
+	    var nsalario = s2 + salario
+	} else if(salario>701 && salario<=1500){
+	    var nsalario = s3 + salario
+	} else{
+	    var nsalario = s4 + salario
+	}
+	    console.log("Seu salario antigo era: ",salario)
+	    if(salario <= 280){
+	        console.log("Seu aumento foi de: 20%")
+	        console.log("O valor do seu aumento foi: ",s1)
+	    } else if(salario>=281 && salario<=700){
+	        console.log("Seu aumento foi de: 15%")
+	        console.log("O valor do seu aumento foi: ",s2)
+	    } else if(salario>701 && salario<=1500){
+	        console.log("Seu aumento foi de: 10%")
+	        console.log("O valor do seu aumento foi: ",s3)
+	    } else{
+	        console.log("Seu aumento foi de: 5%")
+	        console.log("O valor do seu aumento foi: ",s4)
+	    }
+	    console.log("Seu salario novo será: ",nsalario)
+
+14 --> 		var entrada = require("readline-sync")
+
+	var nome = entrada.question("Digite seu nome: ")
+	var peso = parseFloat(entrada.question("Digite seu peso(em kilos): "))
+	var alura = parseFloat(entrada.question("Digite sua altura: "))
+	var imc = peso/(alura**2)
+
+	if(imc<=18.5){
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra abaixo do peso")
+	}else if(imc>=18.6 && imc<=24.9){
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra no peso ideal")
+	}else if(imc>=25.0 && imc<=29.9){
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra levemente acima do peso")
+	}else if(imc>=30.0 && imc<=34.9){
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra com obesidade de grau I")
+	}else if(imc>=35.0 && imc<=39.9){
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra com obesidade de grau II (severa)")
+	}else{
+	    console.log("Caro paciente",nome,", seu IMC é: ",imc,"e você se encontra com obesidade de grau III (mórbida")
+	}
+
+15 --> var entrada = require("readline-sync")
+
+var nome = entrada.question("Ola, digite seu nome completo: ")
+var salario = parseFloat(entrada.question("Digite seu salario bruto: "))
+var fgts = (salario * 0.08)
+var inss = (salario * 0.12)
+
+
+console.log("Olá", nome, "seu salário bruto é: R$"+ salario)
+console.log("Olá", nome, "o desconto do FGTS será: R$"+ fgts)
+console.log("Olá", nome, "o desconto do INSS será: R$"+inss)
+
+if (salario < 1500) {
+    var imposto = (salario * 0.075)
+    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+imposto)
+} else if (salario >= 1500 && salario < 2000) {
+    var imposto = (salario * 0.1)
+    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
+} else {
+    var imposto = (salario * 0.15)
+    console.log("Olá", nome, "o desconto do imposto de renda será: R$"+ imposto)
+}
+console.log("Olá", nome, "seu salário liquido será: R$" + (salario - (inss + imposto)).toFixed(2))
