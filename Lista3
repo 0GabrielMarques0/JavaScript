@@ -1,0 +1,207 @@
+1 -->	for(var i=0;i<=30;i++){
+	    console.log(i)
+	}
+
+2 -->	for(i=3;i<100;i=i+3){
+	    console.log(i)
+	}
+
+3 -->	var entrada = require(`readline-sync`)
+
+	for(i=0;i<=10;i++){
+	    var num = parseInt(entrada.question(`Digite um numero: `))
+	    if(num%2===0){
+	        console.log(`O número ${num} é par!`)
+	    }else{
+	        console.log(`O número ${num} é ímpar!`)
+	    }
+	}
+
+4 -->	var entrada = require(`readline-sync`)
+
+	do {
+	    var palavra = entrada.question(`Digite uma palavra: `)
+	    switch(palavra){
+	        case `sim`:
+	            console.log(`Você decidiu continuar!`)    
+	        break
+	        case `nao`:
+	            console.log(`Você saiu!`)
+	        break
+	        default:
+	            console.log(`Palavra invalida`)
+	        break
+	    }
+	} while (palavra!==`nao`);
+
+5 -->	var entrada = require(`readline-sync`)
+
+	var nome = entrada.question(`Digite seu nome: `)
+	var soma = 0
+
+	for(var i=0;i<10;i++){   
+	    var nota = parseInt(entrada.question(`Digite a idade: `))
+	    soma = soma + nota
+	}
+	var media = soma/10
+	console.log(`${nome} a média das idades é ${media}`)
+
+6 -->	var entrada = require(`readline-sync`)
+
+	var num_secreto = 24
+
+	while(num!==num_secreto){
+	    var num = parseInt(entrada.question(`Tente advinhar o numero secreto: `))
+        
+	    if(num===num_secreto){
+	        console.log(`Você acertou, parabéns!`)
+	        num=num_secreto
+	    }else{
+	        console.log(`Você errou, tente novamente`)
+	    }
+	 }
+
+7 -->	var entrada = require(`readline-sync`)
+
+	var contpar = 0
+	var contimpar = 0
+
+	for(var i=0;i<10;i++){
+	    var num = parseInt(entrada.question(`Digite um numero: `))
+	    if(num%2===0){
+	        contpar++
+	    }else{
+	        contimpar++
+	    }
+	}
+	console.log(`A quantidade de numeros pares é: ${contpar} e a quantidade de numeros impares é: ${contimpar}`)
+
+8 -->	var entrada = require(`readline-sync`)
+
+	var num1 = parseInt(entrada.question(`Digite o primeiro limitador entre 0 e 20: `))
+	var num2 = parseInt(entrada.question(`Digite o segundo limitador entre 0 e 20: `))
+
+	for(var i = 0 + num1;i<=num2;i++){
+	    console.log(i)
+	}
+
+9 -->	var entrada = require(`readline-sync`)
+
+	var id = entrada.question(`Digite seu usuario:`)
+	var senha = entrada.question(`Digite sua senha: `)
+
+	while(id===senha){
+	    console.log(`ERRO`)
+	    var id = entrada.question(`Digite seu usuario:`)
+	    var senha = entrada.question(`Digite sua senha: `)
+	}
+	if(id!==senha){
+	    console.log(`Você entrou!`)
+	}
+
+10 -->	var entrada = require(`readline-sync`)
+
+	var soma = 0
+	var media = 0
+	
+	for(var i=0;i<5;i++){
+	    var num = parseInt(entrada.question(`Digite um numero: `))
+	    soma = soma + num
+	    media = media + num
+	}
+	console.log(`A soma dos numeros digitados é: ${soma}, e a media dos numeros digitados é: ${media/5}`)
+
+11 -->	var entrada = require(`readline-sync`)
+
+	var tabuada = parseInt(entrada.question(`Digite a tabuada de 1 a 9: `))
+
+	if(tabuada<=9){
+	    for(var i=1;i<10;i++){
+	    console.log(`${tabuada} x ${i} = ${tabuada * i}`)
+	    }
+	}else{
+	    console.log(`Numero maior que 9, Erro!`)
+	}
+
+12 -->	var ent = require(`readline-sync`)
+
+	var pao = parseInt(ent.question(`Digite a quantidade paes: `))
+	var total = 0
+
+	for(var i=1;i<=pao;i++){
+	    if(i<=10){
+	        console.log(`${i} unidade(s): R$${i*0.18}`)
+	        total = total + 0.18
+	    }else if(i>10 && i <=20){
+	        console.log(`${i} unidade(s): R$${i*0.16}`)
+	        total = total + 0.16
+	    }else if(i>20 && i<=30){
+	        console.log(`${i} unidades(s): R$${i*0.13}`)
+	        total = total + 0.13
+	    }else{
+	        console.log(`${i} unidades(s): R$${i*0.09}`)
+	    }
+	}
+	console.log(`O valor total a ser pago por ${pao} pao(aes) e: R$${total} `)
+
+13 -->	var entrada = require(`readline-sync`)
+
+	var num_secreto = 7
+
+	do {
+	    var num = parseInt(entrada.question(`Tente advinhar o numero secreto: `))
+	    if(num>num_secreto){
+	        console.log(`Ainda não. Escolha um número menor`)
+	    }else if(num<num_secreto){
+	        console.log(`Ainda não. Escolha um número maior`)
+	    }else{
+	        console.log(`Você acertou, Parabéns!`)
+	    }
+	} while (num!==num_secreto)
+
+14 -->	var insert = require(`readline-sync`)
+
+	var contador=1
+	var menor = 100000000000000000000000000000000
+	
+	while(contador<=10){
+	    var num = parseInt(insert.question(`digite o ${contador} numero: `))
+	    if(num<menor){
+	        menor = num
+	    }
+	    contador++
+	}
+	console.log(menor)
+
+15 -->	var insert = require(`readline-sync`)
+
+	var contador=1
+	var maior = -99999999999999999999999999
+
+	while(contador<=10){
+	    var num = parseInt(insert.question(`digite o ${contador} numero: `))
+	    if(num>maior){
+	        maior = num
+	    }
+	    contador++
+	}
+	console.log(maior)
+
+16 -->	var insert = require(`readline-sync`)
+
+	var contador = 1
+	var menor = 10000000000000000000000000000
+	var maior = -9999999999999999999999999999
+	var total = 0
+	
+	while(contador<=5){
+	    var salto = parseFloat(insert.question(`Digite a distancia do ${contador} salto: `))
+	    if(salto>maior){
+	        maior = salto
+	    }if(salto<menor){
+	        menor = salto
+	    }
+	    total = total + salto
+	    contador++
+	}
+	console.log(`O tamanho medio dos saltos foi: ${total/5}, o menor salto foi: ${menor} e o maior salto foi: ${maior}`)
