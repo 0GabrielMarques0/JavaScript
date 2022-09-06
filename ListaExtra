@@ -97,14 +97,40 @@ if(velo_pedro_gustavo>velo_gustavo_paulo){
 }
 
 9°
-var aparelhos = [A72,Iphone X,Galaxy Note]
+var aparelhos = [`A72`,`Iphone X`,`Galaxy Note`]
 var tempo = [9,14,18]
 var valores = [1200,3500,2400]
+var melhor_custo = Number.POSITIVE_INFINITY
 var custos = []
 
-for(var i=0;i<aparelhos.length;i++){
-	var custo_beneficio = valores[i] - (tempo[i] *14)
-	custos[i] = custo_beneficio
+for(var i=0;i<valores.length;i++){
+	custos[i] = valores[i] - (tempo[i] * 14)
 }
-for(var i=0
-console.log(`O `)
+for(var i=0;i<custos.length;i++){
+	 if(custos[i]<melhor_custo){
+		melhor_custo = custos[i]
+	}
+}
+for(var i=0;i<aparelhos.length;i++){
+	if(melhor_custo === custos[i]){
+		console.log(`O celular com melhor custo beneficio é o ${aparelhos[i]}`)
+	}
+}
+
+10°
+var a = `5244875998566147`
+var b = `111548874596544214777855222`
+var rep_a = 0
+var rep_b = 0
+
+for(var i=0;i<a.length;i++){
+	if(a[i] === a[i+1] && a[i+1] === a[i+2]){
+		rep_a = rep_a + 1
+	}	
+}
+for(var i=0;i<b.length;i++){
+	if(b[i] === b[i+1] && b[i+1] === b[i+2]){
+		rep_b = rep_b + 1
+	}	
+}
+console.log(`A quantidade de 3 pares de valores consecutivos em A é: ${rep_a}, já a quantidade de 3 pares de valores consecutivos em B é: ${rep_b}`)
