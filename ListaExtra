@@ -1,0 +1,110 @@
+1°
+var notas = [6.8,7.2,3.5,4.1,7.1,3.9,8.2,8.3,9.1,2.2,3.7,4.5,7.5,7.8]
+var aprovado = 0
+var reprovado = 0
+var aprov_cont = 0
+var reprov_cont = 0
+
+for(var i=0;i<notas.length;i++){
+	if(notas[i]>=6.0){
+		aprovado = aprovado + notas[i]
+		aprov_cont = aprov_cont + 1
+	}else{
+		reprovado = reprovado + notas[i]
+		reprov_cont = reprov_cont + 1
+	}
+}
+var med_aprovado = aprovado/aprov_cont
+var med_reprovado = reprovado/reprov_cont
+var percentual = (med_aprovado/med_reprovado.toFixed(0))*100
+
+console.log(`A porcentagem  de aprovados é superior em ${percentual}%`)
+
+2°
+var pesos = [80.5,98.3,75.2,85.0,74.1,53.3,61.2,48.3,70.3,52.1]
+var alturas = [1.75,1.89,1.88,1.65,1.74,1.52,1.56,1.89,1.99,1.56]
+var personalA = 0
+var personalB = 0
+
+for(var i=0;i<pesos.length;i++){
+	var IMC = pesos[i]/(alturas[i]**2)
+	if(IMC<=29.9){
+		personalB = personalB + 1		
+	}else{
+		personalA = personalA + 1
+	}
+}
+console.log(`A quantidade de alunos do personal A será: ${personalA}, já a quantidade do personal B será: ${personalB}`)
+
+3°
+var inicio = 534
+var razao = 78
+
+for(var i=0;i<10;i++){
+	console.log(`O ${i + 1}° termo dessa P.A será: ${inicio}`)
+    inicio = inicio + razao
+}
+
+4°
+var senhas = [5,4,2,1,6]
+var soma = 0
+for(var i=0;i<senhas.length;i++){
+	var quadrado = senhas[i]**2
+	soma = soma + quadrado
+}
+console.log(`A chave da senha será: ${soma}`)
+
+5°
+var binarios = [1,1,0,1,0,1]
+var numero = 0
+for(var i=0;i<binarios.length;i++){
+	var transformacao = binarios[i]**(binarios.length-i)
+	var numero = numero + transformacao
+}
+console.log(`A transformação do númro binário 110101 para decimal é: ${numero}`)
+
+6°
+var insert=require(`readline-sync`)
+
+var nome = insert.question(`Digite seu nome: `)
+var contrario = ''
+
+for(var i=nome.length-1;i>=0;i--){
+    contrario = contrario + nome[i]
+}
+console.log(`${contrario}`)
+
+7°
+var dis_pedro_gustavo = 8
+var dis_gustavo_paulo = 15
+var dis_pedro_paulo = ((dis_pedro_gustavo**2) + (dis_gustavo_paulo**2))**(1/2)
+
+console.log(`A distancia de pedro para paulo é: ${dis_pedro_paulo}m `)
+
+8°
+var dis_pedro_gustavo = 80
+var dis_gustavo_paulo = 150
+var tempo_pedro_gustavo = 1
+var tempo_gustavo_paulo = 2
+
+var velo_pedro_gustavo = dis_pedro_gustavo/tempo_pedro_gustavo
+var velo_gustavo_paulo = dis_gustavo_paulo/tempo_gustavo_paulo
+
+if(velo_pedro_gustavo>velo_gustavo_paulo){
+	console.log(`A velocidade de pedro foi ${velo_pedro_gustavo}km/h, logo maior que a de gustavo que foi ${velo_gustavo_paulo}km/h`)
+}else{
+	console.log(`A velocidade de pedro foi ${velo_pedro_gustavo}km/h, logo menor que a de gustavo que foi ${velo_gustavo_paulo}km/h`)
+}
+
+9°
+var aparelhos = [A72,Iphone X,Galaxy Note]
+var tempo = [9,14,18]
+var valores = [1200,3500,2400]
+var custos = []
+
+for(var i=0;i<aparelhos.length;i++){
+	var custo_beneficio = valores[i] - (tempo[i] *14)
+	custos[i] = custo_beneficio
+}
+for(var i=0
+console.log(`O `)
