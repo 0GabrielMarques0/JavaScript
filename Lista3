@@ -140,6 +140,7 @@
 	        total = total + 0.13
 	    }else{
 	        console.log(`${i} unidades(s): R$${i*0.09}`)
+		total = total + 0.09
 	    }
 	}
 	console.log(`O valor total a ser pago por ${pao} pao(aes) e: R$${total} `)
