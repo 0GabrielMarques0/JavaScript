@@ -16,7 +16,7 @@ for(var i=0;i<notas.length;i++){
 }
 var med_aprovado = aprovado/aprov_cont
 var med_reprovado = reprovado/reprov_cont
-var percentual = (med_aprovado/med_reprovado.toFixed(0))*100
+var percentual = ((med_aprovado/med_reprovado).toFixed(2))*100
 
 console.log(`A porcentagem  de aprovados é superior em ${percentual}%`)
 
@@ -58,8 +58,8 @@ console.log(`A chave da senha será: ${soma}`)
 var binarios = [1,1,0,1,0,1]
 var numero = 0
 for(var i=0;i<binarios.length;i++){
-	var transformacao = binarios[i]**(binarios.length-i)
-	var numero = numero + transformacao
+	var transformacao = binarios[i]*(2**(binarios.length-(i+1)))
+    numero = numero + transformacao
 }
 console.log(`A transformação do númro binário 110101 para decimal é: ${numero}`)
 
