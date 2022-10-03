@@ -19,23 +19,23 @@ do {
             cont++
         }else if(acao===2){
             if(nomes.length>0){
-				var index = -1
-				var consulta = insert.question(`Digite o nome do usuario que deseja achar no sistema: `).toUpperCase()
-					for(var i = 0;i<nomes.length;i++){
-						if(nomes[i]===consulta){
-							index = i
-						}
-					}
-					if(index>=0){
-						console.log(`O usuario procurado existe! Suas informações são:\n${nomes[index]}, ${idades[index]} anos, ${sexos[index]}`)
-					}else{
-						console.log(`Usuario nao cadastrado no sistema!`) 
-					}
-			}else{
-				console.log(`Ainda não há usuários cadastrados`)
+			var index = -1
+			var consulta = insert.question(`Digite o nome do usuario que deseja achar no sistema: `).toUpperCase()
+			for(var i = 0;i<nomes.length;i++){
+				if(nomes[i]===consulta){
+					index = i
+				}
 			}
-		}else if(acao===3){
-                if(nomes.length>0){
+			if(index>=0){
+				console.log(`O usuario procurado existe! Suas informações são:\n${nomes[index]}, ${idades[index]} anos, ${sexos[index]}`)
+			}else{
+				console.log(`Usuario nao cadastrado no sistema!`)
+			}
+		}else{
+			console.log(`Ainda não há usuários cadastrados`)
+		}
+	}else if(acao===3){
+         	if(nomes.length>0){
                     console.log(`Os usuarios cadastrados no sistema são:`)
                     for(var i=0;i<idades.length;i++){
                         console.log(`${nomes[i]}, ${idades[i]} anos, ${sexos[i]}`)
