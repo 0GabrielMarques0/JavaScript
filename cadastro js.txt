@@ -1,0 +1,49 @@
+var insert = require(`readline-sync`)
+
+var nomes = []
+var idades = []
+var sexos  = []
+var cont = 0
+
+do {
+    var acao = parseInt(insert.question(`0 - Sair do sistema\n1 - Cadastrar novo usuario\n2 - Consultar um usuario\n3 - Listar todos os usuarios cadastrados\nDigite a acao desejada: `))
+        if(acao===0){
+            console.log(`Você escolheu sair do sistema, obrigado e volte sempre!`)
+        }else if(acao===1){
+            var nome = insert.question(`Insira seu nome: `).toUpperCase()
+            nomes[cont]= nome
+            var idade = parseInt(insert.question(`Insira sua idade: `))
+            idades[cont] = idade
+            var sexo = insert.question(`Insira seu sexo: `).toUpperCase()
+            sexos[cont] = sexo
+            cont++
+        }else if(acao===2){
+            if(nomes.length>0){
+				var index = -1
+				var consulta = insert.question(`Digite o nome do usuario que deseja achar no sistema: `).toUpperCase()
+					for(var i = 0;i<nomes.length;i++){
+						if(nomes[i]===consulta){
+							index = i
+						}
+					}
+					if(index>=0){
+						console.log(`O usuario procurado existe! Suas informações são:\n${nomes[index]}, ${idades[index]} anos, ${sexos[index]}`)
+					}else{
+						console.log(`Usuario nao cadastrado no sistema!`) 
+					}
+			}else{
+				console.log(`Ainda não há usuários cadastrados`)
+			}
+		}else if(acao===3){
+                if(nomes.length>0){
+                    console.log(`Os usuarios cadastrados no sistema são:`)
+                    for(var i=0;i<idades.length;i++){
+                        console.log(`${nomes[i]}, ${idades[i]} anos, ${sexos[i]}`)
+                    }
+                }else{
+                    console.log(`Não há usuarios cadastrados no sistema!`)
+                }
+        }else{
+            console.log(`Digite uma opcao valida!`)
+        }
+} while (acao!==0)
