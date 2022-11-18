@@ -1,0 +1,249 @@
+1-
+var insert = require(`readline-sync`);
+
+function welcome (nome){
+	return `Olá ${nome}, seja bem vindo!`
+};
+var nome_real = insert.question(`Digite seu nome: `);
+console.log(welcome(nome_real));
+
+2-
+var insert = require(`readline-sync`);
+function soma (v1,v2){
+    return `A soma dos números inseridos é ${v1+v2}`
+};
+var v1 = parseFloat(insert.question(`Digite o primeiro valor: `));
+var v2 = parseFloat(insert.question(`Digite o segundo valor: `));
+console.log(soma(v1,v2));
+
+3-
+function par_impar (newArray){
+    newArray.forEach(element =>{
+        if(element	%2===0){
+            console.log(`O numero ${element} é par`)
+        }else{
+            console.log(`O numero ${element} é ímpar`)
+        }
+    })
+};
+var numero = [ 12, 356, 98, 89, 45, 12, 90, 34, 123, 834, 979 ];
+par_impar(numero);
+
+4-
+var insert = require(`readline-sync`)
+
+var nome = insert.question(`Ola, digite seu nome: `)
+function imc (p,h){
+    var calculo = p/(h**2)
+    return `Olá, ${nome} o seu IMC é: ${calculo} `
+}
+var peso = parseFloat(insert.question(`Digite seu peso: `))
+var altura = parseFloat(insert.question(`Digite sua altura: `))
+
+console.log(imc(peso,altura))
+
+5-
+var insert = require(`readline-sync`)
+
+var nome = insert.question(`Ola, digite seu nome: `)
+
+function maior_menor (n1,n2){
+    if(n1>n2){
+        console.log(`Ola, ${nome} dos numeros que foram inseridos o maior é: ${n1}`)
+    }else if(n2>n1){
+        console.log(`Ola, ${nome} dos numeros que foram inseridos o maior é: ${n2}`)
+    }else{
+        console.log(`Ola, ${nome} os numeros digitados sao iguais!`)        
+    }
+}
+
+var num1 = parseFloat(insert.question(`${nome}, digite o primeiro numero: `))
+var num2 = parseFloat(insert.question(`${nome}, digite o segundo numero: `))
+
+maior_menor(num1,num2)
+
+6-
+var vetor =  [ 12, 356, 98, 89, 45, 12, 90, 34, 123, 834, 979 ]
+
+function media (newArray){
+    for(var i = 0 ; i < newArray.length;i++){
+        var soma =+ newArray[i]
+    }
+    var media_total = soma/newArray.length
+    return `A media do vetor fornecido é ${media_total}`
+}
+
+console.log(media(vetor))
+
+
+7-
+const vetor  = [ 13, 356, 98, 89, 45, 12, 90, 34, 123, 834, 979 ]
+
+function menor (newArray){
+    let minor = Number.POSITIVE_INFINITY
+    let index = -1
+    for(let i = 0; i<newArray.length;i++){
+        if(newArray[i]<minor){
+            minor = newArray[i]
+            index = i
+        }
+    }return `O menor numero do vetor fornecido é: ${minor} que está na posicao ${index}`
+}
+
+console.log(menor(vetor))
+
+
+8-
+const vetor  = [ 13, 356, 98, 89, 45, 12, 90, 34, 123, 834, 979 ]
+
+function maior (newArray){
+    let bigger = Number.NEGATIVE_INFINITY
+    let index = -1
+    for(let i = 0; i<newArray.length;i++){
+        if(newArray[i]>bigger){
+            bigger = newArray[i]
+            index = i
+        }
+    }return `O maior numero do vetor fornecido é: ${bigger} que está na posicao ${index}`
+}
+
+console.log(maior(vetor))
+
+
+9-
+const nomes  = ['Gabriel','Maurilio','Niara','Lorena','Vitoria','Sabryna','Jeff','Neto','Sadraks']
+
+function boas_vindas (newArray){
+    newArray.forEach(Element => 
+        console.log(`Seja bem vindo(a) ao curso de desenvolvimento de sistemas ${Element}`))
+}
+boas_vindas(nomes)
+
+
+10-
+const vetor = [ 12, 356, 98, 89, 45, 12, 90, 34, 123, 834, 979 ]
+
+function paresInsideVetor (newArray){
+    let pares = []
+    let paresIndex = 0
+    newArray.forEach(Element=>{
+        if(Element%2===0){
+            pares[paresIndex] = Element
+            paresIndex++
+        }
+    })
+    return `Os elementos do vetor fonecidos que sao pares são: ${pares}`
+}
+
+console.log(paresInsideVetor(vetor))
+
+
+11-
+let insert = require(`readline-sync`)
+
+function conceito (name,media){
+    if(media>0.0 && media<4.9){
+        console.log(`Olá ${name} de acordo com sua media seu conceito é: D`)
+    }else if(media>5.0 && media<6.9){
+        console.log(`Olá ${name} de acordo com sua media seu conceito é: C`)
+    }else if(media>7.0 && media<8.9){
+        console.log(`Olá ${name} de acordo com sua media seu conceito é: B`)
+    }else if(media>9.0 && media<10.0){
+        console.log(`Olá ${name} de acordo com sua media seu conceito é: A`)
+    }
+}
+let nome = insert.question(`Digite seu nome: `)
+let mediaReal = insert.question(`Digite seu media: `)
+
+conceito(nome,mediaReal)
+
+
+12-
+let insert = require(`readline-sync`)
+
+function areaCirc (d){
+    let a = ((d/2)**2)*3.14
+    return a
+}
+
+let area = parseFloat(insert.question(`Digite o diametro da circuferencia da qual deseja obter a area: `))
+
+console.log(`A area da circuferencia é: ${areaCirc(area)}`)
+
+
+13-
+let insert = require(`readline-sync`)
+
+function valorUber (dis){
+    let valor = 5.75 + (3.25*dis)
+    return valor
+}
+
+let name = insert.question(`Ola! Qual o seu nome? `)
+let distancia = parseFloat(insert.question(`${name}, qual a distancia da sua corrida? `))
+
+console.log(`${name}, o valor da sua corrida no uber será de: ${valorUber(distancia)} reais`)
+
+
+14-
+let insert = require(`readline-sync`)
+
+function calculadora (ope){
+    if (ope>0 && ope<=4){
+        let v1 = parseFloat(insert.question(`Digite o primeia valor: `))
+        let v2 = parseFloat(insert.question(`Digite o segundo valor `))
+        switch (ope) {
+            case 1:
+                console.log(`A soma dos valores ${v1+v2}`)
+                break;
+        
+            case 2:
+                console.log(`A subtracao dos valores ${v1+v2}`)
+                break;
+        
+            case 3:
+                console.log(`A divisao dos valores ${v1+v2}`)
+                break;
+        
+            case 4:
+                console.log(`A multiplicacao dos valores ${v1+v2}`)
+                break;
+        }
+    }else{
+        console.log(`ERRO! Digite uma operacao valida`)
+    }
+}
+let operacao = parseInt(insert.question(`Escolha a operacao desejada:\n1 - soma(+)\n2 - subtracao(-)\n3 - divisao(/)\n4 - multiplicacao(*)\n`))
+
+calculadora(operacao)
+
+
+15-
+let insert = require(`readline-sync`)
+
+function calcularArea (figura) {
+    if(figura>0 && figura<=3){
+        switch (figura){
+            case 1:
+                let lado = parseFloat(insert.question(`Digite o lado do quadrado: `))
+                console.log(`A area do quadrado é: ${lado**2}`)
+                break
+            case 2:
+                let base = parseFloat(insert.question(`Digite a base do triangulo: `))
+                let altura = parseFloat(insert.question(`Digite a altura do triangulo: `))
+                console.log(`A area do triangulo é: ${(base*altura)/2}`)
+                break            
+            case 3:
+                let baseMaior = parseFloat(insert.question(`Digite a base Maior do trapezio: `))
+                let baseMenor = parseFloat(insert.question(`Digite a base Menor do trapezio: `))
+                let alturaT = parseFloat(insert.question(`Digite a altura do trapezio: `))
+                console.log(`A area do trapezio é: ${((baseMaior+baseMenor)*alturaT)/2}`)
+                break
+        }
+    }else{
+        console.log(`ERRO! Escolha uma figura das opcoes!`)
+    }
+}
+let escolhaFigura = parseInt(insert.question(`Escolha a figura que deseja calcular a area:\n1 - quadrado\n2 - triangulo\n3 - trapezio\n:`))
+
+calcularArea(escolhaFigura)
